@@ -4,7 +4,9 @@
       <a class="navbar-brand" href="#">Docqment</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span>Cerrar sesión</a></li>
+      <li>
+       <%= link_to('Cerrar sesión', destroy_user_session_path, method: :delete) %>  
+      </li>
     </ul>
   </div>
 </nav>
