@@ -1,0 +1,20 @@
+postgresql: &postgresql
+ adapter: postgresql
+ min_messages: ERROR
+ pool: 5
+ timeout: 5000
+ port: 5433
+
+development:
+  <<: *postgresql
+  database: docqment_development
+
+test:
+  <<: *postgresql
+  database: docqment_test
+
+production:
+  <<: *postgresql
+  database: docqment_production
+  username: docqment
+  password: <%= ENV['DOCQMENT_DATABASE_PASSWORD'] %>
